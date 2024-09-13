@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRents - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            overflow: hidden;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080.png?text=Download+Background');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+          background-image: url("logo.png");
+          background-color: #cccccc;
+         }
+
+        /* Cinematic Background Overlay */
+        .cinematic-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+        }
+
+        /* Cinematic Headings */
+        .content {
+            z-index: 1;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: #ff6f61;
+            letter-spacing: 2px;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #f1f1f1;
+            animation: slideIn 2.5s ease-in-out;
+        }
+
+        /* Download Buttons */
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            animation: slideUp 3s ease-in-out;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #ff6f61;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            transform: scale(1.1);
+            background-color: #ffab40;
+        }
+
+        .download-button i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .content h1 {
+                font-size: 3rem;
+            }
+
+            .content p {
+                font-size: 1.2rem;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+            }
+
+            .download-button {
+                font-size: 1rem;
+                padding: 12px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cinematic Overlay -->
+    <div class="cinematic-overlay"></div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h1>Download QuickRents</h1>
+        <p>Get the app now and start renting with ease!</p>
+
+        <!-- Download Buttons -->
+        <div class="download-buttons">
+            <a href="#" class="download-button">
+                <img src="apple.png" width="50px" alt=""><i class="fab fa-apple"></i> Download for iOS
+            </a>
+            <a href="#" class="download-button">
+                <img src="technology.png" width="50px" alt=""><i class="fab fa-android"></i> Download for Android
+            </a>
+        </div>
+    </div>
+
+    <!-- Icons CDN for FontAwesome (to use app and Android icons) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</body>
+</html>

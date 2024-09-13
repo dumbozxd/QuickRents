@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - QuickRents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: rgb(229, 121, 18);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        /* Product Page Layout */
+        .product-page {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 60px;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .product-images, .product-details {
+            width: 48%;
+        }
+
+        /* Product Images */
+        .product-images img {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        /* Product Details */
+        .product-details h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .product-details p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .product-details .price {
+            font-size: 2rem;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .product-details label {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .product-details select, .product-details input {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product-details button {
+            background-color: rgb(229, 121, 18);
+            color: white;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .product-details button:hover {
+            background-color: #ff6f61;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-page {
+                flex-direction: column;
+            }
+
+            .product-images, .product-details {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>QuickRents</h1>
+        <p>Rent what you need nearby – Fast, Affordable, Local.</p>
+    </header>
+
+    <!-- Product Page Section -->
+    <section class="product-page">
+        <!-- Product Images -->
+        <div class="product-images">
+            <img src="scoo.png" alt="Premium Mountain Bike Image">
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <h2>Honda Dio Scooty</h2>
+            <p>High-quality Scooty designed for both beginners and professionals. Ideal for off-road and rough terrains. Durable, lightweight, and equipped with the latest suspension technology.</p>
+            
+            <p class="price">₹700/day</p>
+            
+            <label for="rental-duration">Select Rental Duration</label>
+            <select id="rental-duration">
+                <option value="1">1 day - ₹700</option>
+                <option value="3">3 days - ₹1600</option>
+                <option value="7">1 week - ₹3000</option>
+            </select>
+
+            <label for="pickup-location">Select Pickup Location</label>
+            <input type="text" id="pickup-location" placeholder="Enter pickup location">
+
+            <button>Rent Now</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 QuickRents. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

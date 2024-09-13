@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRents - Products for Rent</title>
+    <link rel="icon" href="logo3.png" type="image/icon type">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #333;
+           
+        }
+
+        /* Header */
+        header {
+            background-color: #e57912;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #ff6f61;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 40px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            width: 300px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .product-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .rental-price {
+            font-size: 1.2rem;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .rent-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .rent-button:hover {
+            background-color: #ffab40;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .products-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>QuickRents - Products for Rent</h1>
+        <p>Find what you need and rent it from nearby sellers!</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="products.html">Products</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-container">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="dslr.jpeg" alt="Camera for rent">
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Professional DSLR Camera</h2>
+                <p class="product-description">Rent a high-quality DSLR camera for photography or videography projects.</p>
+                <p class="rental-price">399Rs/day</p>
+                <button class="rent-button">Rent Now</button>
+            </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="drill3.jpg" alt="Power Drill for rent">
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Power Drill</h2>
+                <p class="product-description">Need to fix or build something? Rent a power drill for your home projects.</p>
+                <p class="rental-price">199Rs/day</p>
+                <button class="rent-button">Rent Now</button>
+            </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="fridge.jpg" alt="Refrigerator">
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Refrigerator</h2>
+                <p class="product-description">Rent a mountain bike for a fun ride through nature and rough terrains.</p>
+                <p class="rental-price">1000Rs/day</p>
+                <button class="rent-button">Rent Now</button>
+            </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="tent.jpg" alt="Tent for rent">
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Camping Tent</h2>
+                <p class="product-description">Planning a camping trip? Rent a spacious tent for your outdoor adventure.</p>
+                <p class="rental-price">499Rs/day</p>
+                <button class="rent-button">Rent Now</button>
+            </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="projector.jpg" alt="Projector for rent">
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">HD Projector</h2>
+                <p class="product-description">Rent a high-definition projector for your presentations, movies, or gaming.</p>
+                <p class="rental-price">745Rs/day</p>
+                <button class="rent-button">Rent Now</button>
+            </div>
+        </div>
+
+        
+        <!-- Product Card 6 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="speak.jpg" alt="Speaker for rent">
+          </div>
+          <div class="product-details">
+              <h2 class="product-title">High Quality Speakers</h2>
+              <p class="product-description">Rent High Quality Speakers for Parties.</p>
+              <p class="rental-price">600Rs/day</p>
+              <button class="rent-button">Rent Now</button>
+          </div>
+      </div>
+
+      
+        <!-- Product Card 7 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="scoo.png" alt="Scooty for rent">
+          </div>
+          <div class="product-details">
+              <h2 class="product-title">Honda Dio Scooty</h2>
+              <p class="product-description">Rent a Scooty for your travel.</p>
+              <p class="rental-price">700Rs/day</p>
+              <a href="purchase.html"><button class="rent-button">Rent Now</button></a>
+          </div>
+      </div>
+
+      
+        <!-- Product Card 8 -->
+        <div class="product-card">
+          <div class="product-image">
+              <img src="urf.webp" alt="Projector for rent">
+          </div>
+          <div class="product-details">
+              <h2 class="product-title">Surf Board</h2>
+              <p class="product-description">Are you at beach. Try surfing for the first time</p>
+              <p class="rental-price">400Rs/day</p>
+              <button class="rent-button">Rent Now</button>
+          </div>
+      </div>
+
+      
+
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 QuickRents. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

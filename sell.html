@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Product - QuickRents</title>
+    <link rel="icon" href="logo3.png" type="image/icon type">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            background: url('logo.png') no-repeat center center/cover;
+        }
+
+        header {
+            background-color: #e57912;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            
+            
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            
+        }
+
+        .form-container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+            
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            
+        }
+
+        button {
+            background-color: #e57912;
+            color: white;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff6f61;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .image-preview {
+            display: flex;
+            gap: 10px;
+        }
+
+        .image-preview img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                width: 95%;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+      <img src="logo.png" height="60px" alt=""> <h1>QuickRents</h1>
+      
+        
+    </header>
+
+    <!-- Seller Form Section -->
+    <div class="form-container">
+        <h2>List Your Product</h2>
+        <form id="product-form" action="#" method="POST" enctype="multipart/form-data">
+            
+            <!-- Product Name -->
+            <div class="form-group">
+                <label for="product-name">Product Name</label>
+                <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+            </div>
+            
+            <!-- Category -->
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="vehicles">Vehicles</option>
+                    <option value="tools">Tools</option>
+                    <option value="gadgets">Gadgets</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="appliances">Appliances</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+            
+            <!-- Tag Suggestions -->
+            <div class="form-group">
+                <label for="tags">Tags (Optional)</label>
+                <input type="text" id="tags" name="tags" placeholder="Add tags separated by commas (e.g., bike, mountain)">
+            </div>
+            
+            <!-- Description -->
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="5" placeholder="Provide a detailed description of your product" required></textarea>
+            </div>
+
+            <!-- Price Per Day -->
+            <div class="form-group">
+                <label for="price">Price (Enter your currency)</label>
+                <input type="number" id="price" name="price" placeholder="Enter price per day" required>
+                <label for="currency">Currency</label>
+                <select id="currency" name="currency" required>
+                    <option value="USD">USD</option>
+                    <option value="INR">INR</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+                <p id="price-inr">Price in INR: <span>0</span></p>
+            </div>
+
+            <!-- Upload Images -->
+            <div class="form-group">
+                <label for="product-images">Upload Product Images</label>
+                <input type="file" id="product-images" name="product-images" multiple required>
+                <div class="image-preview" id="image-preview"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">List Product</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 QuickRents. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Script Section -->
+    <script>
+        // Real-time image preview
+        document.getElementById('product-images').addEventListener('change', function() {
+            const preview = document.getElementById('image-preview');
+            preview.innerHTML = '';
+            const files = this.files;
+            
+            Array.from(files).forEach(file => {
+                const img = document.createElement('img');
+                img.src = URL.createObjectURL(file);
+                preview.appendChild(img);
+            });
+        });
+
+        // Currency conversion rates (for demo purposes, static rates)
+        const conversionRates = {
+            'USD': 82,
+            'EUR': 90,
+            'GBP': 100,
+            'INR': 1
+        };
+
+        // Convert price to INR
+        document.getElementById('currency').addEventListener('change', function() {
+            updatePriceInINR();
+        });
+
+        document.getElementById('price').addEventListener('input', function() {
+            updatePriceInINR();
+        });
+
+        function updatePriceInINR() {
+            const price = parseFloat(document.getElementById('price').value);
+            const currency = document.getElementById('currency').value;
+            const conversionRate = conversionRates[currency];
+            const priceInINR = price * conversionRate;
+            document.getElementById('price-inr').querySelector('span').textContent = priceInINR.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>

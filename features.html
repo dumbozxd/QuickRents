@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRents - Features</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #282c34;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+        }
+
+        nav a:hover {
+            background-color: #ff6f61;
+            border-radius: 5px;
+        }
+
+        /* Features Section */
+        .features-page {
+            padding: 60px;
+            text-align: center;
+        }
+
+        .features-page h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff6f61;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-box p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            padding: 40px;
+            text-align: center;
+            background-color: #ffab40;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #fff;
+            color: #ff6f61;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #ff6f61;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-page h2, .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>QuickRents Features</h1>
+        <p>Discover the Unique Features That Make Renting Easier and Affordable</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="download.html">Download</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Features Section -->
+    <section class="features-page">
+        <h2>Why Choose QuickRents?</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">📍</div>
+                <h3>Local & Convenient</h3>
+                <p>Find items in your community for fast pick-up. Skip the wait and get what you need from local sellers.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">💸</div>
+                <h3>Affordable Rentals</h3>
+                <p>Rent high-value items like power tools, electronics, and vehicles at affordable prices without the commitment of ownership.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure Transactions</h3>
+                <p>Payments are secured through our escrow system, ensuring both buyers and sellers are protected in every transaction.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">📱</div>
+                <h3>Easy to Use App</h3>
+                <p>The QuickRents app offers an intuitive interface that makes searching, renting, and managing items seamless and efficient.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">♻️</div>
+                <h3>Sustainability</h3>
+                <p>Support a greener lifestyle by renting instead of buying, reducing the need for new products and minimizing waste.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🌐</div>
+                <h3>Diverse Categories</h3>
+                <p>From tools to party supplies, QuickRents provides a wide range of categories to meet all your rental needs in one place.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <h2>Start Renting Today!</h2>
+         <a href="download.html"><button class="cta-button">Download QuickRents Now</button></a>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 QuickRents. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+

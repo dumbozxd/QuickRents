@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - QuickRents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #e57912;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        /* Section Heading */
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #e57912;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background-color: #ff6f61;
+            animation: underline 1s ease-in-out;
+        }
+
+        @keyframes underline {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* About Us Section */
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-direction: column;
+        }
+
+        .about-text {
+            max-width: 800px;
+            animation: slideInFromRight 1.5s ease-in-out;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Team Section */
+        .team {
+            margin-bottom: 60px;
+        }
+
+        .team-member {
+            display: inline-block;
+            width: 30%;
+            margin: 15px;
+            padding: 20px;
+            background-color: #e57912;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .team-member:hover {
+            background-color: #ff6f61;
+            transform: translateY(-5px);
+        }
+
+        .team .name {
+            margin-top: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .team .role {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* CTA Section */
+        .cta {
+            background-color: #ff6f61;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: white;
+            color: #ff6f61;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e57912;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .team-member {
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            .about-text {
+                width: 100%;
+            }
+        }
+
+        #meet
+        {
+          text-align: right;
+          padding-left: 10;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>About QuickRents</h1>
+    </header>
+
+    <!-- About Section -->
+    <div class="container">
+        <h2>Who We Are</h2>
+        <div class="about">
+            <div class="about-text">
+                <p>At QuickRents, we provide a platform where people can rent out their unused items and help others fulfill their needs. Whether it’s a tool, a vehicle, or gadgets – we have it all! Our mission is to create a shared economy that benefits everyone.</p>
+                <p>Our team is passionate about fostering a community-driven marketplace, connecting people through rental services that are fast, affordable, and local.</p>
+            </div>
+        </div>
+    </div> 
+
+     <h2 id="meet">Meet the Team</h2>
+
+    <!-- Team Section -->
+    <div class="container team">
+        
+        <div class="team-member">
+            <div class="name">Nilesh</div>
+            <div class="role">App Developer</div>
+        </div>
+        <div class="team-member">
+            <div class="name">Yash Rathi</div>
+            <div class="role">Leader</div>
+        </div>
+        <div class="team-member">
+            <div class="name">Nirmal Chaudhary</div>
+            <div class="role">Member</div>
+        </div>
+        <div class="team-member">
+            <div class="name">Radhika</div>
+            <div class="role">Member</div>
+        </div>
+        <div class="team-member">
+            <div class="name">Anjali</div>
+            <div class="role">Member</div>
+        </div>
+        <div class="team-member">
+            <div class="name">Paramvir</div>
+            <div class="role">Member</div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <h2>Join Our Community</h2>
+        <p>Want to list your products for rent or rent something you need? Get started with QuickRents today!</p>
+         
+        <button class="cta-button">Sign Up Now</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 QuickRents. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

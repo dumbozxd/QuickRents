@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRents - Rent What You Need Nearby</title>
+    <link rel="icon" href="logo3.png" type="image/icon type">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif ;
+        }
+        
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background-color: #e57912;
+            color: #070707;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff6f61;
+            border-radius: 5px;
+            transform: translateY(-2px);
+        }
+
+        /* Main Section */
+        .main-section {
+            padding: 60px;
+            text-align: center;
+            background: url('logo.png') no-repeat center center/cover;
+            color: white;
+            background-attachment: fixed;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .main-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: slideInFromLeft 2s ease-in-out;
+        }
+
+        .main-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            animation: slideInFromRight 2s ease-in-out;
+        }
+
+        .cta-button {
+            background-color: #fff;
+            color: #ff6f61;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            animation: slideUp 2.5s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #ffab40;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .services p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px;
+            background-color: #e57912;
+            color: white;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature-item {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-item {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-item p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-item h4 {
+            font-size: 1.2rem;
+            color: #e57912;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .service-grid, .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-section h2, .promotion h2 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+      
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>QuickRents</h1>
+        <p>Rent what you need nearby – Fast, Affordable, Local.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="contact.html">Contact</a>
+        <a href="sell.html">Sell</a>
+
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <h2>Your One-Stop Rental Marketplace</h2>
+        <p>Find and rent anything you need from people nearby, whether it's tools, vehicles, or gadgets.</p>
+        <a href="products.html"><button class="cta-button">Get Started</button></a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <p>Explore a wide range of services that make renting easier and more convenient.</p>
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>Vehicle Rentals</h3>
+                <p>Rent cars, bikes, and other vehicles from locals at affordable prices.</p>
+            </div>
+            <div class="service-item">
+                <h3>Tool Rentals</h3>
+                <p>Need tools for a project? Find everything you need in your neighborhood.</p>
+            </div>
+            <div class="service-item">
+                <h3>Gadget Rentals</h3>
+                <p>Rent the latest gadgets and electronics for short-term use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose QuickRents?</h2>
+        <div class="features-grid
